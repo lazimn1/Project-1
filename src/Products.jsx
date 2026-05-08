@@ -62,7 +62,6 @@ export default function Products() {
       (item) => item.id === product.id
     );
 
-    // If already exists increase quantity
     if (existingProduct) {
 
       const updatedCart = existingCart.map((item) =>
@@ -81,7 +80,6 @@ export default function Products() {
 
     } else {
 
-      // Add new product
       existingCart.push({
         ...product,
         quantity: 1,
@@ -114,14 +112,12 @@ export default function Products() {
             className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2"
           >
 
-            {/* Product Image */}
             <img
               src={product.img}
               alt={product.name}
               className="w-full h-72 object-cover hover:scale-105 transition duration-500"
             />
 
-            {/* Product Details */}
             <div className="p-5 text-center">
 
               <h2 className="text-2xl font-bold">

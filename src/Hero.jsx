@@ -5,20 +5,16 @@ export default function Hero() {
   return (
     <div id="home" className="w-full overflow-hidden">
 
-      {/* HERO SECTION */}
       <section className="relative h-screen w-full">
 
-        {/* Background Image */}
         <img
           src={logo}
           alt="shoe"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
-        {/* Overlay */}
         <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* Content */}
         <div className="relative z-10 h-full flex items-center px-4 sm:px-8 lg:px-20">
 
           <div className="max-w-3xl">
@@ -37,7 +33,6 @@ export default function Hero() {
               performance, and modern street style for everyday wear.
             </p>
 
-            {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
 
               <Link
@@ -58,7 +53,6 @@ export default function Hero() {
         </div>
       </section>
 
-      {/* SECOND SECTION */}
       <section
         className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-20 bg-cover bg-center"
         style={{
@@ -67,10 +61,8 @@ export default function Hero() {
         }}
       >
 
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
 
-        {/* Content Card */}
         <div className="relative z-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-10 lg:p-14 max-w-4xl text-center shadow-2xl">
 
           <p className="text-blue-500 uppercase tracking-[3px] text-xs sm:text-sm font-semibold mb-4">
