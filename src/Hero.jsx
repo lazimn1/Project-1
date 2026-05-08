@@ -1,4 +1,4 @@
-import logo from "./shoe-logo.png";
+import logo from "./shoe-logo.jpg";
 import { Link } from "react-router-dom";
 
 export default function Hero() {
@@ -54,7 +54,7 @@ export default function Hero() {
       </section>
 
       <section
-        className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-20 bg-cover bg-center"
+        className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-20 bg-cover bg-center border border-x-white"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
