@@ -1,97 +1,86 @@
-export default function Products() {
-  const shoes = [
-    {
-      id: 1,
-      name: "Nike Air Max",
-      price: "$120",
-      img: "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-II6282-100_1.jpg",
-    },
-    {
-      id: 2,
-      name: "Adidas Ultraboost",
-      price: "$150",
-      img: "https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-      id: 3,
-      name: "Puma RS-X",
-      price: "$100",
-      img: "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/390776/53/sv01/fnd/IND/fmt/png/RS-X-Efekt-PRM-Sneakers",
-    },
-    {
-      id: 4,
-      name: "Reebok Classic",
-      price: "$90",
-      img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop"
-    },
-    {
-      id: 5,
-      name: "Converse Run Star",
-      price: "$110",
-      img: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop",
-    },
-    {
-      id: 6,
-      name: "New Balance 550",
-      price: "$130",
-      img: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=1000&auto=format&fit=crop",
-    },
-    {
-      id: 7,
-      name: "Vans Old Skool",
-      price: "$85",
-      img: "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop",
-    },
-    {
-      id: 8,
-      name: "Jordan Retro",
-      price: "$200",
-      img: "https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=1000&auto=format&fit=crop",
-    },
-  ];
+import logo from './shoe-logo.png'
+import { Link } from "react-router-dom";
+
+export default function Hero() {
+  return (
+    <div id='home' className='relative'>
+        <img src={logo} className="h-full w-full object-cover"/>
+        <div className="absolute inset-0 bg-black/30"></div>
+
+        <div style={{marginTop:"20%"}} className='absolute inset-0 flex flex-col'>
+          <h1 style={{marginLeft:"2%"}} className='text-sm  sm:text-lg md:text-xl lg:text-3xl text-white font-medium mb-1'>WELCOME TO NALAKATH SHOE PLANET</h1>
+          <p style={{marginLeft:"8%"}} className='text-xs sm:text-md md:text-lg lg:text-xl text-black font-extrabold mb-6'>"Quality footwear for every step."</p>
+          <Link to='/products'
+             style={{marginLeft:"12%"}}
+             className='text-xs sm:text-md md:text-lg lg:text-xl size-fit px-4 py-1 items-center text-center text-white border-white hover:border-red-700 hover:text-red-500 shadow-2xl border-2 rounded-4xl'
+            >Explore Collections
+          </Link>
+        </div>
+
+        <section
+         className="relative flex flex-col  items-center justify-center text-center h-screen bg-cover bg-center"
+         style={{backgroundImage: 'url(https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)'}}
+         >
+          <div className="absolute inset-0 backdrop-blur-xs bg-black/30"></div>
+
+          <div className="relative bg-gray-900/70 p-8 rounded-xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-blue-700 mb-3">step Into Style</h1>
+            <p className="text-xs sm:text-xs md:text-sm lg:text-lg text-gray-300 mb-10">Discover the latest shoes at unbeatable prices.</p>
+            <Link
+                to="/products"
+                className="text-sm sm:text-sm md:text-lg lg:text-2xl px-5 py-3 bg-blue-700 text-white rounded-lg shadow-2xl shadow-black hover:bg-blue-600"
+                >Shop Now
+            </Link>
+          </div>    
+        </section>
+    </div>
+  )
+}
+
+/*
+import { useState } from "react";
+import logo from './4in-logo.png';
+import { Link } from "react-router-dom";
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <section
-      id="products"
-      className="bg-white py-20 px-6 pt-30"
-    >
-      <div className="text-center mb-14">
-        <h2 className="text-4xl font-bold text-gray-900">
-          Featured Products
-        </h2>
-    
+    <nav className="fixed top-0 left-0 w-full flex shadow-2xl items-center justify-between bg-black/60 z-50 backdrop-blur-xs h-13 sm:h-auto md:h-auto lg:h-20">
+      <div className="flex items-center">
+        <img src={logo} alt="4in logo" className="w-7 sm:w-10 md:w-15 lg:w-20 h-auto mx-4" />
+        <h1 className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-blue-600">NALAKATH</h1>
+      </div>
+      <div>
+        <ul className="hidden md:flex space-x-6 mx-10 p-6 text-white">
+          <Link to="/" className="hover:text-blue-700">Home</Link>
+
+          <Link to="/products" className="hover:text-blue-700">Products</Link>
+
+          <Link to="/contact" className="hover:text-blue-700">Contact</Link>
+
+          <a href="#about" className="hover:text-blue-700">About</a>
+
+          <Link to="/cart" className="hover:text-blue-700">Cart</Link>
+        </ul>
+        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden p-6 text-xl text-white hover:text-blue-700 hover:scale-110 transition duration-200">☰</button>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {shoes.map((shoe) => (
-          <div
-            key={shoe.id}
-            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2"
-          >
-            <div className="overflow-hidden">
-              <img
-                src={shoe.img}
-                alt={shoe.name}
-                className="w-full h-64 object-cover hover:scale-110 transition duration-500"
-              />
-            </div>
+      {menuOpen && (
+        <ul className="absolute top-13 sm:top-19 right-0 md:hidden flex flex-col bg-black/70 text-white px-6 py-4 mx-1 space-y-4 rounded-b-sm">
+          <Link to="/" className="hover:text-blue-600">Home</Link>
 
-            <div className="p-5 text-center">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {shoe.name}
-              </h3>
+          <Link to="/products" className="hover:text-blue-600">Products</Link>
+          
+          <Link to="/contact" className="hover:text-blue-600">Contact</Link>
 
-              <p className="text-lg text-gray-500 font-bold mb-4">
-                {shoe.price}
-              </p>
+          <a href="#about" className="hover:text-blue-600">About</a>
 
-              <button className="w-full bg-blue-700 text-white py-3 rounded-lg hover:bg-gray-800 transition duration-300">
-                Add to Cart
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          <Link to="/cart" className="hover:text-blue-600">Cart</Link>
+        </ul>
+      )}      
+      
+    </nav>
   );
 }
+  */
