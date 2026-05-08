@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <div id="home" className="w-full overflow-hidden">
 
-      <section className="relative h-screen w-full">
+      <section className="relative h-250 w-full">
 
         <img
           src={logo}
@@ -15,7 +15,7 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 h-full flex items-center px-4 sm:px-8 lg:px-20">
+        <div className="relative z-10 h-full flex max-sm:top-60 sm:items-center md:items-center lg:items-center px-4 sm:px-8 lg:px-20 text-center">
 
           <div className="max-w-3xl">
 
@@ -33,7 +33,7 @@ export default function Hero() {
               performance, and modern street style for everyday wear.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="flex flex-col gap-4 mt-8 justify-center mx-30">
 
               <Link
                 to="/products"
@@ -54,16 +54,16 @@ export default function Hero() {
       </section>
 
       <section
-        className="relative min-h-screen flex items-center justify-center px-4 sm:px-8 lg:px-16 py-20 bg-cover bg-center border border-x-white"
+        className="relative h-250 flex items-center justify-center px-4 sm:px-8 lg:px-16 py-20 bg-cover bg-center lg:border lg:border-x-white"
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
         }}
       >
 
-        <div className="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/60 "></div>
 
-        <div className="relative z-10 bg-white/10 border border-white/10 backdrop-blur-lg rounded-3xl p-6 sm:p-10 lg:p-14 max-w-4xl text-center shadow-2xl">
+        <div className="relative z-10 bg-white/10 border border-white/10 backdrop-blur-md rounded-3xl p-6 sm:p-10 lg:p-14 max-w-4xl text-center shadow-2xl">
 
           <p className="text-blue-500 uppercase tracking-[3px] text-xs sm:text-sm font-semibold mb-4">
             Trending Collection
