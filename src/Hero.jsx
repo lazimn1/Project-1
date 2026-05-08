@@ -15,9 +15,9 @@ export default function Hero() {
 
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative z-10 h-full flex max-sm:top-60 sm:items-center md:items-center lg:items-center px-4 sm:px-8 lg:px-20 text-center">
+        <div className="relative z-10 h-full flex justify-center max-sm:top-60 sm:items-center md:items-center lg:items-center px-4 sm:px-8 lg:px-20 text-center">
 
-          <div className="max-w-3xl">
+          <div className="max-w-3xl w-screen">
 
             <p className="text-blue-500 font-semibold tracking-[3px] uppercase text-xs sm:text-sm md:text-base mb-4">
               Welcome To Nalakath Shoe Planet
@@ -33,7 +33,7 @@ export default function Hero() {
               performance, and modern street style for everyday wear.
             </p>
 
-            <div className="flex flex-col gap-4 mt-8 justify-center mx-30">
+            <div className="flex flex-col gap-4 mt-8 justify-center max-sm:mx-20">
 
               <Link
                 to="/products"
