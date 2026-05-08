@@ -105,7 +105,7 @@ export default function Products() {
 
       <p className="text-xl text-center text-gray-600 mb-20">premium sneakers collections for you.</p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols sm:grid-cols-3 lg:grid-cols-4 gap-8">
 
         {products.map((product) => (
 
