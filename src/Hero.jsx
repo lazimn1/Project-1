@@ -33,13 +33,13 @@ export default function Hero() {
               performance, and modern street style for everyday wear.
             </p>
 
-            <div className="flex flex-col gap-4 mt-8 justify-center max-sm:mx-20">
+            <div className="flex flex-col gap-4 mt-8 justify-center max-sm:mx-10">
 
               <Link
                 to="/products"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-2xl text-center font-semibold transition duration-300 shadow-xl"
               >
-                Explore Collection
+                Explore Collections
               </Link>
 
               <Link
